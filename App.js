@@ -1,21 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, ImagePropTypes, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+const MyName = (props)=>{
+  return(
+    <Text>{props.name}</Text>
+  )
+}
+
+export default class App extends React.Component {
+
+  render(){
+    return (
+      <View style={styles.container}>
+        <Text>Love Calculator</Text>
+        <StatusBar style="auto" />
+      </View>
+    );
+    }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection:'row',
+    justifyContent: 'space-around',
   },
+  box :{
+    color:"white",
+    borderWidth:2,
+    borderColor:"green",
+    padding:12,
+    margin:4,
+    backgroundColor:'green',
+
+
+
+  }
 });
